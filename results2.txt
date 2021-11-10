@@ -1,0 +1,122 @@
+Actual: 
+          
+          
+          
+          
+          
+ O O O O O
+O O O O O 
+ O O O O O
+O O O O O 
+ O O O O O
+
+Net output: 
+O O O O O 
+ O O O O O
+O O O O O 
+ O O O O O
+O O O O O 
+ O O O O O
+O O O O O 
+ O O O O O
+O O O O O 
+ O O O O O
+
+Actual: 
+OOO O    O
+ O  OOO OO
+  O O OO O
+ OOO   O  
+OO  O  OOO
+ O OOO   O
+O OO  O  O
+   O OOO  
+OO OOO  O 
+ O  O  OOO
+
+Net output: 
+OO  OO  OO
+OO  OO  OO
+  OO  OO  
+  OO  OO  
+OO  OO  OO
+OO  OO  OO
+  OO  OO  
+  OO  OO  
+OO  OO  OO
+OO  OO  OO
+
+Actual: 
+OOOOO     
+O   O OOO 
+O   O OOO 
+O   O OOO 
+OOOOO     
+     OOOOO
+ OOO O   O
+ OOO O   O
+ OOO O   O
+     OOOOO
+
+Net output: 
+OOOOO     
+OOOOO     
+OOOOO     
+OOOOO     
+OOOOO     
+     OOOOO
+     OOOOO
+     OOOOO
+     OOOOO
+     OOOOO
+
+Actual: 
+O  OOOO  O
+OO  OOOO  
+OOO  OOOO 
+OOOO  OOOO
+ OOOO  OOO
+  OOOO  OO
+O  OOOO  O
+OO  OOOO  
+OOO  OOOO 
+OOOO  OOOO
+
+Net output: 
+O  O  O  O
+ O  O  O  
+  O  O  O 
+O  O  O  O
+ O  O  O  
+  O  O  O 
+O  O  O  O
+ O  O  O  
+  O  O  O 
+O  O  O  O
+
+Actual: 
+OOOOOOOOOO
+O        O
+O        O
+O        O
+O   OO   O
+O   OO   O
+O        O
+O        O
+O        O
+OOOOOOOOOO
+
+Net output: 
+OOOOOOOOOO
+O        O
+O OOOOOO O
+O O    O O
+O O OO O O
+O O OO O O
+O O    O O
+O OOOOOO O
+O        O
+OOOOOOOOOO
+
+
+Differences from stored images: 0
