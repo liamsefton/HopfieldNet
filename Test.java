@@ -22,6 +22,8 @@ public class Test {
             else{
                 System.out.println("Enter filename for saved weights: ");
                 hn.readWeightsFromFile(scanner.nextLine());
+                init_weights = reader.readerTraining(training_and_testing);
+                
             }
 
             //double[][] init_weights = {{1,-1,1,-1,1,-1,1,-1,1,-1, -1,1,-1,1,-1,1,-1,1,-1,1, 1,-1,1,-1,1,-1,1,-1,1,-1, -1,1,-1,1,-1,1,-1,1,-1,1, 1,-1,1,-1,1,-1,1,-1,1,-1, -1,1,-1,1,-1,1,-1,1,-1,1, 1,-1,1,-1,1,-1,1,-1,1,-1, -1,1,-1,1,-1,1,-1,1,-1,1, 1,-1,1,-1,1,-1,1,-1,1,-1, -1,1,-1,1,-1,1,-1,1,-1,1}};
@@ -37,13 +39,13 @@ public class Test {
                 for(int j = 0; j < init_weights.length; j++){
                     bw.write("Actual: \n");
                     double[] result = hn.test(init_weights[j]);
-                    saveResults(init_weights[j], 10, bw);
+                    saveResults(init_weights[j], reader.getWidth(), bw);
                     for(int i = 0; i < result.length; i++){
                         if(result[i] != init_weights[j][i])
                             differences += 1;
                     }
                     bw.write("Net output: \n");
-                    saveResults(result, 10, bw);
+                    saveResults(result, reader.getWidth(), bw);
                 }
                 bw.write("\n");
                 bw.write("Differences from stored images: " + Integer.toString(differences) + "\n");
@@ -63,14 +65,14 @@ public class Test {
                 BufferedWriter bw = new BufferedWriter(new FileWriter(new File(scanner.nextLine())));
                 for(int j = 0; j < init_weights.length; j++){
                     bw.write("Actual: \n");
-                    saveResults(test_inputs[j], 10, bw);
+                    saveResults(test_inputs[j], reader.getWidth(), bw);
                     double[] result = hn.test(test_inputs[j]);
                     for(int i = 0; i < result.length; i++){
                         if(result[i] != init_weights[j][i])
                             differences += 1;
                     }
                     bw.write("Net output: \n");
-                    saveResults(result, 10, bw);
+                    saveResults(result, reader.getWidth(), bw);
                 }
                 bw.write("\n");
                 bw.write("Differences from stored images: " + Integer.toString(differences) + "\n");

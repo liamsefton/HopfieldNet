@@ -2,6 +2,19 @@ import java.io.*;
 import java.util.*;
 
 public class Reader{
+    public int width;
+
+    public Reader(){
+        width = 10;
+    }
+
+    public int getWidth(){
+        return width;
+    }
+
+    public void setWidth(int val){
+        width = val;
+    }
     public double[][] readerTraining(String filename){
         double[][] imgArray = new double[0][0];
         try {
@@ -21,6 +34,8 @@ public class Reader{
             br.readLine(); //read last empty line
             String input = br.readLine();
             int width = input.length();
+            setWidth(width);
+            System.out.println(width);
             int l = input.length();
             for (int j = 0; j < width; j++){
                 dimension += 1; //counter for the full image length, j is counter for current line of image
@@ -48,12 +63,10 @@ public class Reader{
             while (count < numImg){
                 br.readLine();  //reads the empty line preceeding each image
                 count += 1;
-                System.out.println(count);
                     dimension = 0;
                     for (int i = 0; i < dimImg/width; i++){  //10 rows of 10 in this case, needs to be generalized
                         input = br.readLine();
                         l = input.length();
-                        System.out.println(l);
                         for (int j = 0; j < width; j++){
                             dimension += 1; //counter for the full image length, j is counter for current line of image
                             if(input.charAt(j) == 'O'){  //nonwhitspace is 1
@@ -124,9 +137,6 @@ public class Reader{
                     for (int i = 0; i < dimImg/width; i++){
                         String input = br.readLine();
                         int l = input.length();
-                        if (l > 9){ //if line has more than 10 characters
-                            input = input.substring(0,10);
-                        }
                         for (int j = 0; j < width; j++){
                             dimension += 1; //counter for the full image length, j is counter for current line of image
                             if(input.charAt(j) == 'O'){  //nonwhitspace is 1
